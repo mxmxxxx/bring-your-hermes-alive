@@ -1,0 +1,16 @@
+.local/
+.env
+.env.*
+!.env.example
+*.local.*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+logs/
+*.log
+.DS_Store
+Thumbs.db
+models/
+conf.yaml
+CLIENT_SETUP.private.md

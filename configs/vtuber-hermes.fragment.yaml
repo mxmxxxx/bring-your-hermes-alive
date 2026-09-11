@@ -1,0 +1,18 @@
+# Partial configuration; NOT a runnable conf.yaml.
+# Merge these fields into the installed upstream template, preserving ASR/TTS
+# and model settings. Verified against upstream template conf_version v1.2.1;
+# live integration is pending. No environment interpolation is assumed.
+system_config:
+  host: 'localhost'
+character_config:
+  agent_config:
+    conversation_agent_choice: 'basic_memory_agent'
+    agent_settings:
+      basic_memory_agent:
+        llm_provider: 'openai_compatible_llm'
+        use_mcpp: false
+    llm_configs:
+      openai_compatible_llm:
+        base_url: 'https://YOUR-HOST.YOUR-TAILNET.ts.net/v1'
+        llm_api_key: 'REPLACE_LOCALLY_DO_NOT_COMMIT'
+        model: 'REPLACE_WITH_ACTUAL_MODEL_ID'
